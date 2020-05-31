@@ -23,21 +23,19 @@ public class SudokuSolve {
     public static boolean sudokuSolver(int[][] arr,int n) {
         int r = -1;
         int c = -1;
-        boolean empty = true;
+        boolean isFull = true;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if(arr[i][j] == 0) {
                      r = i; c = j;
-                     empty = false;
+                     isFull = false;
                      break;
                 }
             }
-            if(!empty)
-                break;
         }
-        if(empty) return true;
+        if(isFull) return true;
 
-        for(int i = 1;i<=9;i++) {
+        for(int i = 1;i<=n;i++) {
             if (canPlace(arr, n, r, c, i)) {
                 arr[r][c] = i;
                 if (sudokuSolver(arr, n)) return true;
