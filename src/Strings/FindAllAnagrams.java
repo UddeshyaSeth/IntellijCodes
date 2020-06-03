@@ -35,7 +35,6 @@ public class FindAllAnagrams {
         if(compare(arr1,arr2))
                 a.add(n-m);
 
-
         System.out.println(a);
     }
     public static void main(String[] args) {
