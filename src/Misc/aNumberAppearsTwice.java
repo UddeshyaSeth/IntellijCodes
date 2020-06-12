@@ -1,5 +1,6 @@
 package Misc;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class aNumberAppearsTwice {
@@ -7,15 +8,17 @@ public class aNumberAppearsTwice {
         Arrays.sort(arr);
         if(arr.length <= 2) return;
 
-        int j = 3;
-        for(int i= 3;i<arr.length;i++) {
-           if(arr[j-3] != arr[i]){
+        int j = 2;
+        for(int i= 2;i<arr.length;i++) {
+           if(arr[j-2] != arr[i]){
                 arr[j] = arr[i];
                 j++;
             }
         }
         for(int k = 0;k<j;k++)
             System.out.print(arr[k]+" ");
+
+        System.out.print(Integer.valueOf("100",2));
 
     }
     public static void main(String[] args) {
